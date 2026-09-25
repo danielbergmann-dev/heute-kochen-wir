@@ -1,0 +1,1 @@
+ALTER TABLE `cooking_days` ADD `dish` text DEFAULT '' NOT NULL;

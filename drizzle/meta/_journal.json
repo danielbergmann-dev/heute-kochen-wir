@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1790257659627,
+      "tag": "0000_typical_wild_child",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1790258935896,
+      "tag": "0001_mushy_bloodstorm",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1790283319278,
+      "tag": "0002_cool_black_cat",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1790288490039,
+      "tag": "0003_clear_cooking_days",
+      "breakpoints": true
+    }
+  ]
+}
