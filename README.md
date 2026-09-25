@@ -1,6 +1,6 @@
 # Heute kochen wir
 
-Gemeinsam nachhaltig kochen: WS 1 und WS 2 erfassen Gerichte und acht Antworten pro Kochtag. Auswertungen lassen sich nach Klasse und Zeitraum filtern und drucken.
+Gemeinsam nachhaltig kochen: WS 1 und WS 2 erfassen Gerichte und acht Antworten pro Kochtag. Jede Klasse sieht ausschließlich ihre eigenen Kochtage und Auswertungen. Diese lassen sich nach Zeitraum filtern und drucken.
 
 ## Veröffentlichung mit GitHub Pages
 
@@ -18,7 +18,7 @@ GitHub Pages liefert ausschließlich die Oberfläche. Die API und die bestehende
 
 Gerichte, Antworten und Kochtage werden auf dem Server gespeichert, nicht in localStorage oder in diesem Repository. Beide Oberflächen greifen auf dieselben Daten zu. Ungespeicherte Eingaben befinden sich bis zum Speichern im Arbeitsspeicher des geöffneten Tabs.
 
-Die GitHub-Oberfläche verwendet ein kurzlebiges, serverseitig signiertes Sitzungstoken ausschließlich im Arbeitsspeicher. Dadurch werden keine Drittanbieter-Cookies benötigt. Nach Neuladen ist eine erneute Anmeldung erforderlich. Passwörter und Signaturschlüssel stehen ausschließlich in der Serverkonfiguration. Die API prüft das Klassenrecht für jeden Schreibzugriff. Freigegebener Browser-Ursprung: `https://danielbergmann-dev.github.io`.
+Die GitHub-Oberfläche verwendet ein kurzlebiges, serverseitig signiertes Sitzungstoken ausschließlich im Arbeitsspeicher. Dadurch werden keine Drittanbieter-Cookies benötigt. Nach Neuladen ist eine erneute Anmeldung erforderlich. Passwörter und Signaturschlüssel stehen ausschließlich in der Serverkonfiguration. Die API begrenzt jeden Lese- und Schreibzugriff auf die angemeldete Klasse. Eine klassenübergreifende Gesamtauswertung ist mit Klassenzugängen nicht verfügbar. Freigegebener Browser-Ursprung: `https://danielbergmann-dev.github.io`.
 
 ## Weiterentwicklung
 

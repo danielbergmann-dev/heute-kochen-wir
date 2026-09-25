@@ -1,11 +1,11 @@
-import {cors,preflight,isPagesRequest,sessionToken} from '@/lib/class-access';
+import {cors,preflight} from '@/lib/class-access';
 import { getAccess, sameOrigin } from '@/lib/class-access';
 import { database } from '@/lib/store';
 export const dynamic='force-dynamic';
 const reply=(data:unknown,status=200)=>Response.json(data,{status,headers:{'Cache-Control':'no-store'}});
 async function handleGET(request:Request){
  const access=await getAccess(request);if(!access)return reply({error:'Bitte mit deinem Zugangscode anmelden.'},401);
- try { const result=await database().prepare('SELECT id, class_id as classId, date, dish, answers, version FROM cooking_days ORDER BY date DESC').all(); return reply({records:result.results.map((r:any)=>({...r,answers:JSON.parse(r.answers)}))}); }catch(e){console.error(e);return reply({error:'Die Daten konnten nicht geladen werden. Bitte erneut versuchen.'},503);}
+ try { const result=await database().prepare('SELECT id, class_id as classId, date, dish, answers, version FROM cooking_days WHERE class_id = ? ORDER BY date DESC').bind(access).all(); return reply({records:result.results.map((r:any)=>({...r,answers:JSON.parse(r.answers)}))}); }catch(e){console.error(e);return reply({error:'Die Daten konnten nicht geladen werden. Bitte erneut versuchen.'},503);}
 }
 async function handlePOST(request:Request){
  const access=await getAccess(request);if(!access)return reply({error:'Bitte mit deinem Zugangscode anmelden.'},401);
