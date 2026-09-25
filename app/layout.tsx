@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Küchenkompass",
+  title: "Heute kochen wir",
   description: "Gemeinsam nachhaltig und gesund kochen. Checklisten für zwei Klassen mit Online-Speicherung und Auswertung.",
   icons: {
     icon: "/favicon.svg",

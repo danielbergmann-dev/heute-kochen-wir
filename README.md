@@ -1,4 +1,4 @@
-# Küchenkompass
+# Heute kochen wir
 
 Gemeinsam nachhaltig kochen: WS 1 und WS 2 erfassen Gerichte und acht Antworten pro Kochtag. Auswertungen lassen sich nach Klasse und Zeitraum filtern und drucken.
 
@@ -9,7 +9,7 @@ Die fertige Webseite liegt im Ordner `docs`.
 1. Im Repository **Settings → Pages** öffnen.
 2. Unter **Build and deployment** die Quelle **Deploy from a branch** wählen.
 3. Branch **main**, Ordner **/docs** auswählen und **Save** anklicken.
-4. Die von GitHub bestätigte Adresse öffnen. Der konfigurierte Projektpfad ist `/K-chenkompass/`.
+4. Die von GitHub bestätigte Adresse öffnen. Nach der Umbenennung des Repositorys in `heute-kochen-wir` lautet die Adresse `https://danielbergmann-dev.github.io/heute-kochen-wir/`. Relative Asset-Pfade unterstützen die bisherige und die neue Adresse.
 
 ## Zentrale Speicherung
 
